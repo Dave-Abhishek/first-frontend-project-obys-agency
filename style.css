@@ -13,18 +13,26 @@ html,body{
 body{
     overflow-x: hidden ;
 }
-/* This CSS is for cursor */
-#crsr{
-    height: 2vw;
-    width: 2vw;
-    border-radius: 50%;
-    /* background-color: white; */
-    border: 1px solid #ffffffbe;
-    position: fixed;
-    z-index: 999;
-    mix-blend-mode: difference; /*circle color will black in white background and white in black background*/
-    transform: translate(-50%,-50%); /*This will point circle to cirsur's center*/
+
+.mousefollower{
+    border: 2px solid #fff;
+    background-color: rgb(255, 255, 255);
+    scale: 2;
+    mix-blend-mode: difference;
 }
+
+/* This CSS is for cursor  */
+/* #crsr{ */
+    /* height: 2vw; */
+    /* width: 2vw; */
+    /* border-radius: 50%; */
+    /* background-color: white; */
+    /* border: 1px solid #ffffffbe; */
+    /* position: fixed; */
+    /* z-index: 999; */
+    /* mix-blend-mode: difference; circle color will black in white background and white in black background */
+    /* transform: translate(-50%,-50%); This will point circle to cirsur's center */
+/* }
 
 /* This css is for first loader which is gofrom 0 to 100 and then go from down to up */
 #loader{
@@ -178,6 +186,19 @@ body{
     font-weight: 500;
     border-bottom: 0.6vw solid #151515;
 }
+#flag{
+    height: 25vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+}
+#hero3{
+    /* background-color: red; */
+    z-index: 999;
+    position: relative;
+}
 
 
 #page2{
@@ -192,28 +213,31 @@ body{
     position: relative;
     left: 28%;
     background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
+    background-size: cover;
+    background-position: center;
 
 }  
-#video-container img{
+/* #video-container img{
     position: absolute;
     height: 100%;
     width: 100%;
     object-fit: cover;
     top: 0;
-}
+} */
 #video-container video{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    opacity: 0;
 }  
 #video-cursor{
     background-color: #FFA63D;
-    height: 8.5vw;
-    width: 8.5vw;
+    height: 9vw;
+    width: 9vw;
     border-radius: 50%;
     position: absolute;
-    top: -10;
-    left: 80%;
+    top: -15;
+    left: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -227,8 +251,126 @@ body{
 #page3{
     min-height: 100vh;
     width: 100%;
-    background-color: rgb(101, 99, 99);
+    /* background-color: rgb(101, 99, 99); */
     position: relative;
+    padding: 17vh 2vw;
+    margin-bottom: 20vh;
+    margin-top: 20vh;
+}
+#page3 h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 28vw;
+}
+#page3 h1::before{
+    content: "02";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -12%;
+    top: 8%;
+}
+#page3 .underline{
+    margin-left: 28vw;
+}
+#image-div-container{
+    /* background-color: red; */
+    padding: 1vw;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.image-div{
+    height: 38vw;
+    width: 27vw;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin: 2vw;
+    /* background-color: blue; */
+}
+.image-div:nth-child(1){
+    height: 29vw;
+    width: 21vw;
+}
+.image-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.page3-circle1{
+    height: 23vw;
+    width: 23vw;
+    margin-top: 23vh;
+    margin-left: 10vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page3-circle1 svg{
+    height: 30%;
+}
+.page3-circle2{
+    height: 23vw;
+    width: 23vw;
+    /* margin-top: 23vh; */
+    /* margin-left: 10vw; */
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page3-circle2 svg{
+    height: 30%;
+    rotate: -45deg;
+}
+.circle-in{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.5s;
+    scale: 0;
+    border-radius: 50%;
+}
+.circle-in p{
+    font-size: 0.95vw;
+    font-weight: 500;
+    color: #000;
+    width: 60%;
+    scale: 0;
+    transition: all ease 0.5s;
+    transition-delay: 0.3s;
+    opacity: 0;
+}
+.page3-circle1:hover .circle-in{
+    scale: 1;
+}
+.page3-circle2:hover .circle-in{
+    scale: 1;
+}
+.page3-circle1:hover p{
+    scale: 1;
+    opacity: 1;
+}
+.page3-circle2:hover p{
+    scale: 1;
+    opacity: 1;
 }
 
 
@@ -427,4 +569,10 @@ body{
 #footer > h5{
     font-size: 1vw;
     font-weight: 500;
+}
+
+/* The below is must necessary for shery js animation (Highly important)*/
+._canvas_container{
+    z-index: 999999 !important;
+    pointer-events: none;
 }
