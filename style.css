@@ -1,38 +1,44 @@
-@font-face{
+@font-face {
     font-family: "Plain Light";
     src: url(./plain-regular-webfont.ttf);
 }
-@font-face{
+
+@font-face {
     font-family: "Plain Light";
     src: url(./plain-light-webfont.ttf);
 }
-@font-face{
+
+@font-face {
     font-family: "silk serif";
     src: url(./silkserif-regularitalic-webfont.ttf);
 }
-@font-face{
+
+@font-face {
     font-family: "Plain Light";
     src: url(./silkserif-lightitalic-webfont.ttf);
 }
 
 
-*{
+* {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-family: "Plain Light";
     color: #fff;
 }
-html,body{
+
+html,
+body {
     height: 100%;
     width: 100%;
 }
 
-body{
-    overflow-x: hidden ;
+body {
+    overflow-x: hidden;
 }
 
-.mousefollower{
+.mousefollower {
     border: 2px solid #fff;
     background-color: rgb(255, 255, 255);
     scale: 2;
@@ -41,19 +47,19 @@ body{
 
 /* This CSS is for cursor  */
 /* #crsr{ */
-    /* height: 2vw; */
-    /* width: 2vw; */
-    /* border-radius: 50%; */
-    /* background-color: white; */
-    /* border: 1px solid #ffffffbe; */
-    /* position: fixed; */
-    /* z-index: 999; */
-    /* mix-blend-mode: difference; circle color will black in white background and white in black background */
-    /* transform: translate(-50%,-50%); This will point circle to cirsur's center */
+/* height: 2vw; */
+/* width: 2vw; */
+/* border-radius: 50%; */
+/* background-color: white; */
+/* border: 1px solid #ffffffbe; */
+/* position: fixed; */
+/* z-index: 999; */
+/* mix-blend-mode: difference; circle color will black in white background and white in black background */
+/* transform: translate(-50%,-50%); This will point circle to cirsur's center */
 /* }
 
 /* This css is for first loader which is gofrom 0 to 100 and then go from down to up */
-#loader{
+#loader {
     height: 100%;
     width: 100%;
     position: fixed;
@@ -61,68 +67,131 @@ body{
     background-color: #0B0B0B;
     padding: 25vh 10vw;
 }
-.line{
+
+.line {
     /* background-color: red; */
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
-    overflow: hidden; /*Overflow hidden means whatever is outer of line class will not visible*/
+    overflow: hidden;
+    /*Overflow hidden means whatever is outer of line class will not visible*/
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
     gap: 3vw;
 }
-#line1-part1{
+
+#line1-part1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     gap: 1vw;
 }
-#line1-part1 h5, #line1-part1 h6{
+
+#line1-part1 h5,
+#line1-part1 h6 {
     font-size: 3vw;
     font-weight: 100;
     font-family: "silk serif";
 }
-#line1-part1 h5{
+
+#line1-part1 h5 {
     /* background-color: red; */
     width: 5vw;
     text-align: right;
 }
-.line h1{
+
+.line h1 {
     font-size: 6.5vw;
     text-transform: uppercase;
     font-weight: 900;
 }
-.line h2{
+
+.line h2 {
     font-size: 5vw;
     text-transform: uppercase;
     font-weight: 900;
     opacity: 0;
+    -webkit-animation-duration: 2s;
     animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
 }
 
-@keyframes anime {
-    0%{
+@-webkit-keyframes anime {
+    0% {
         font-family: "Plain Light";
-        -webkit-text-stroke: 0.1px #fff; /* used to make border on text*/
+        -webkit-text-stroke: 0.1px #fff;
+        /* used to make border on text*/
         color: #fff;
         font-weight: 500;
         opacity: 1;
     }
-    48%{
+
+    48% {
         font-family: "Plain Light";
         -webkit-text-stroke: 0.1px #fff;
         color: #fff;
         font-weight: 500;
         opacity: 0;
     }
-    50%{
+
+    50% {
         font-family: "silk serif";
         -webkit-text-stroke: 0.1px #fff;
         color: transparent;
         font-weight: 500;
         opacity: 1;
     }
-    100%{
+
+    100% {
+        font-family: "silk serif";
+        -webkit-text-stroke: 0.1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 0;
+    }
+}
+
+@keyframes anime {
+    0% {
+        font-family: "Plain Light";
+        -webkit-text-stroke: 0.1px #fff;
+        /* used to make border on text*/
+        color: #fff;
+        font-weight: 500;
+        opacity: 1;
+    }
+
+    48% {
+        font-family: "Plain Light";
+        -webkit-text-stroke: 0.1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 0;
+    }
+
+    50% {
+        font-family: "silk serif";
+        -webkit-text-stroke: 0.1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 1;
+    }
+
+    100% {
         font-family: "silk serif";
         -webkit-text-stroke: 0.1px #fff;
         color: transparent;
@@ -133,54 +202,80 @@ body{
 
 
 /* This is main website page which contans many pages */
-#main{
+#main {
     position: relative;
     background-color: #0B0B0B;
 }
-#page1{
+
+#page1 {
     height: 100vh;
     width: 100%;
     /* background-color: #151515; */
     position: relative;
     z-index: 100;
 }
-#page1 #nav{
+
+#page1 #nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 2.3vw 5.5vw;
 }
-#nav-part2{
+
+#nav-part2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     gap: 3vw;
 }
-#nav-part2 h4{
+
+#nav-part2 h4 {
     font-size: 0.8vw;
     font-weight: 500;
 }
-.hero{
+
+.hero {
     /* background-color: red; */
     width: 72%;
     margin-left: 27%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     overflow-y: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     /* z-index: 99999; */
 }
-.hero :nth-child(2){
+
+.hero :nth-child(2) {
     margin-top: 18vh;
 }
-.hero h1{
+
+.hero h1 {
     font-size: 7.2vw;
     font-weight: 600;
     text-transform: uppercase;
     line-height: 7.2vw;
     position: relative;
 }
-#hero1::before{
+
+#hero1::before {
     content: "01";
     position: absolute;
     font-size: 3vw;
@@ -189,7 +284,8 @@ body{
     left: 19%;
     top: 29%;
 }
-.hero h2{
+
+.hero h2 {
     /* background-color: red; */
     font-size: 7.2vw;
     font-weight: 600;
@@ -198,34 +294,40 @@ body{
     border-bottom: 0.6vw solid #fff;
     padding-bottom: 0.8vw;
 }
-.hero h2:hover{
+
+.hero h2:hover {
     -webkit-text-stroke: 1px #fff;
     color: transparent;
     font-weight: 500;
     border-bottom: 0.6vw solid #151515;
 }
-#flag{
+
+#flag {
     height: 25vw;
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     opacity: 0;
 }
-#hero3{
+
+#hero3 {
     /* background-color: red; */
     z-index: 999;
     position: relative;
 }
 
 
-#page2{
+#page2 {
     height: 100vh;
     width: 100%;
     padding-top: 17vh;
     position: relative;
 }
-#video-container{
+
+#video-container {
     height: 65vh;
     width: 71vw;
     position: relative;
@@ -234,7 +336,8 @@ body{
     background-size: cover;
     background-position: center;
 
-}  
+}
+
 /* #video-container img{
     position: absolute;
     height: 100%;
@@ -242,13 +345,15 @@ body{
     object-fit: cover;
     top: 0;
 } */
-#video-container video{
+#video-container video {
     height: 100%;
     width: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
     opacity: 0;
-}  
-#video-cursor{
+}
+
+#video-cursor {
     background-color: #FFA63D;
     height: 9vw;
     width: 9vw;
@@ -256,17 +361,24 @@ body{
     position: absolute;
     top: -15;
     left: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     z-index: 999;
 }
-#video-cursor i{
+
+#video-cursor i {
     font-size: 2vw;
 }
 
 
-#page3{
+#page3 {
     min-height: 100vh;
     width: 100%;
     /* background-color: rgb(101, 99, 99); */
@@ -275,13 +387,15 @@ body{
     margin-bottom: 20vh;
     margin-top: 20vh;
 }
-#page3 h1{
+
+#page3 h1 {
     font-size: 7vw;
     text-transform: uppercase;
     position: relative;
     margin-left: 28vw;
 }
-#page3 h1::before{
+
+#page3 h1::before {
     content: "02";
     position: absolute;
     font-size: 3vw;
@@ -290,38 +404,54 @@ body{
     left: -12%;
     top: 8%;
 }
-#page3 .underline{
+
+#page3 .underline {
     margin-left: 28vw;
 }
-#image-div-container{
+
+#image-div-container {
     /* background-color: red; */
     padding: 1vw;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
-.image-div{
+
+.image-div {
     height: 42vw;
     width: 30vw;
     position: relative;
     overflow: hidden;
+    -ms-flex-negative: 0;
     flex-shrink: 0;
     margin: 2vw;
     /* background-color: blue; */
 }
-.image-div:nth-child(1){
+
+.image-div:nth-child(1) {
     height: 29vw;
     width: 21vw;
 }
-.image-div img{
+
+.image-div img {
     height: 100%;
     width: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
+    -o-object-position: center;
     object-position: center;
 }
-.page3-circle1{
+
+.page3-circle1 {
     height: 23vw;
     width: 23vw;
     margin-top: 23vh;
@@ -329,14 +459,22 @@ body{
     border: 2px solid #fff;
     border-radius: 50%;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
-.page3-circle1 svg{
+
+.page3-circle1 svg {
     height: 30%;
 }
-.page3-circle2{
+
+.page3-circle2 {
     height: 23vw;
     width: 23vw;
     /* margin-top: 23vh; */
@@ -344,72 +482,100 @@ body{
     border: 2px solid #fff;
     border-radius: 50%;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
-.page3-circle2 svg{
+
+.page3-circle2 svg {
     height: 30%;
     rotate: -45deg;
 }
-.circle-in{
+
+.circle-in {
     height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
     background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
     transition: all ease 0.5s;
     scale: 0;
     border-radius: 50%;
 }
-.circle-in p{
+
+.circle-in p {
     font-size: 0.95vw;
     font-weight: 500;
     color: #000;
     width: 60%;
     scale: 0;
+    -webkit-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
     transition: all ease 0.5s;
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
     transition-delay: 0.3s;
     opacity: 0;
 }
-.page3-circle1:hover .circle-in{
+
+.page3-circle1:hover .circle-in {
     scale: 1;
 }
-.page3-circle2:hover .circle-in{
+
+.page3-circle2:hover .circle-in {
     scale: 1;
 }
-.page3-circle1:hover p{
+
+.page3-circle1:hover p {
     scale: 1;
     opacity: 1;
 }
-.page3-circle2:hover p{
+
+.page3-circle2:hover p {
     scale: 1;
     opacity: 1;
 }
 
 
-#page4{
+#page4 {
     min-height: 100vh;
     width: 100%;
     /* background-color: rgb(101, 99, 99); */
     position: relative;
     padding: 7vh 0;
 }
-#page4-content{
+
+#page4-content {
     width: 70vw;
     position: relative;
     margin-left: 28%;
 }
-#page4-content h1{
+
+#page4-content h1 {
     font-size: 7vw;
     text-transform: uppercase;
     position: relative;
 }
-#page4-content h1::before{
+
+#page4-content h1::before {
     content: "03";
     position: absolute;
     font-size: 3vw;
@@ -418,30 +584,38 @@ body{
     left: -12%;
     top: 8%;
 }
-#page4-content .underline{
+
+#page4-content .underline {
     height: 1px;
     width: 100%;
     background-color: #fff;
     margin: 5vw 0;
 }
-#page4-content>p{
+
+#page4-content>p {
     /* Tere ">" is because in page4-content, there are many paragraph ans this symbol is for just inside the paragraph, not other. */
     font-size: 2.05vw;
     width: 50%;
     margin-bottom: 3vw;
 }
-#page4-flex{
+
+#page4-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
-#page4-flex img{
+
+#page4-flex img {
     width: 48%;
 }
-#page4-flex p{
+
+#page4-flex p {
     font-size: 0.9vw;
     width: 19%;
     margin-left: 1vw;
 }
-#page4-blue-div{
+
+#page4-blue-div {
     background-color: #3F7DF4;
     width: 33vw;
     padding: 3vw;
@@ -449,36 +623,47 @@ body{
     margin-top: -35vh;
     margin-left: 26vw;
 }
-.blue-div-elem{
+
+.blue-div-elem {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items:flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     /* background-color: red; */
     padding: 1.7vw 0;
     border-bottom: 1.5px solid #ffffff94;
 }
-.blue-div-elem h4{
+
+.blue-div-elem h4 {
     font-size: 1.4vw;
     font-weight: 500;
 }
-.blue-div-elem p{
+
+.blue-div-elem p {
     width: 40%;
     font-size: 0.7vw;
 }
 
 
-#page5{
+#page5 {
     min-height: 100vh;
     width: 100%;
     position: relative;
 }
-.elem{
+
+.elem {
     /* background-color: red; */
     white-space: nowrap;
     overflow-x: hidden;
     margin-bottom: -2vw;
 }
-.elem h1{
+
+.elem h1 {
     text-transform: uppercase;
     font-size: 7vw;
     -webkit-text-stroke: 1px #fff;
@@ -486,33 +671,54 @@ body{
     color: transparent;
     display: inline-block;
     margin-right: 16px;
+    -webkit-animation-name: anime1;
     animation-name: anime1;
+    -webkit-animation-duration: 12s;
     animation-duration: 12s;
+    -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
 }
-.elem span{
+
+.elem span {
     font-style: italic;
     font-family: "silk serif";
     color: transparent;
 }
 
-@keyframes anime1{
-    from{
+@-webkit-keyframes anime1 {
+    from {
+        -webkit-transform: translateX(0);
         transform: translateX(0);
     }
-    to{
+
+    to {
+        -webkit-transform: translateX(calc(-100% - 20px));
         transform: translateX(calc(-100% - 20px));
     }
 }
 
-.elem2{
+@keyframes anime1 {
+    from {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    to {
+        -webkit-transform: translateX(calc(-100% - 20px));
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+.elem2 {
     /* background-color: red; */
     white-space: nowrap;
     overflow-x: hidden;
     margin-bottom: -2vw;
 }
-.elem2 h1{
+
+.elem2 h1 {
     text-transform: uppercase;
     font-size: 7vw;
     -webkit-text-stroke: 1px #fff;
@@ -520,21 +726,28 @@ body{
     color: transparent;
     display: inline-block;
     margin-right: 16px;
+    -webkit-transform: translateX(calc(-100% - 20px));
+    -ms-transform: translateX(calc(-100% - 20px));
     transform: translateX(calc(-100% - 20px));
+    -webkit-animation-name: anime1;
     animation-name: anime1;
+    -webkit-animation-duration: 12s;
     animation-duration: 12s;
+    -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     animation-direction: reverse;
 }
-.elem2 span{
+
+.elem2 span {
     font-style: italic;
     font-family: "silk serif";
     color: transparent;
 }
 
 
-#footer{
+#footer {
     height: 100vh;
     width: 100%;
     /* background-color: red; */
@@ -542,13 +755,15 @@ body{
     padding-left: 28vw;
     padding-right: 2vw;
 }
-#footer h1{
+
+#footer h1 {
     font-size: 7vw;
     text-transform: uppercase;
     /* background-color: blue; */
     position: relative;
 }
-#footer h1::before{
+
+#footer h1::before {
     content: "04";
     position: absolute;
     font-size: 3vw;
@@ -557,47 +772,59 @@ body{
     left: -12%;
     top: 8%;
 }
-.underline{
+
+.underline {
     height: 1px;
     width: 100%;
     background-color: #fff;
     margin: 2.5vw 0;
 }
-#footer-div{
+
+#footer-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     padding-right: 15vw;
     padding-top: 4vw;
     margin-bottom: 6vw;
 }
-#footer-div h6{
+
+#footer-div h6 {
     font-size: 0.9vw;
     margin-bottom: 1.5vw;
     font-weight: 500;
 }
-.box{
+
+.box {
     width: 20%;
 }
-#footer-div h5{
+
+#footer-div h5 {
     font-size: 1.4vw;
     font-weight: 500;
     /* margin: 0.1vh 0; */
 }
-#footer > h5{
+
+#footer>h5 {
     font-size: 1vw;
     font-weight: 500;
 }
 
 /* The below is must necessary for shery js animation (Highly important)*/
-._canvas_container{
+._canvas_container {
     z-index: 999999 !important;
     pointer-events: none;
 }
 
 
 @media (max-width:600px) {
-    #page1{
+    #page1 {
         height: 60vh;
         width: 100%;
         /* background-color: #151515; */
@@ -605,51 +832,77 @@ body{
         z-index: 100;
         padding-top: 1px;
     }
-    #page1 #nav{
+
+    #page1 #nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
-        justify-content:flex-end;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
         padding: 4.3vw 5vw;
         position: fixed;
         width: 100%;
         /* background-color: red; */
         top: 0;
     }
-    #nav svg{
+
+    #nav svg {
         scale: 0.8;
     }
-    #nav-part2{
+
+    #nav-part2 {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         gap: 3vw;
         display: none;
     }
-    #nav-part2 h4{
+
+    #nav-part2 h4 {
         font-size: 0.8vw;
         font-weight: 500;
     }
-    .hero{
+
+    .hero {
         /* background-color: red; */
         width: 72%;
         margin-left: 5%;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         overflow-y: hidden;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         /* z-index: 99999; */
     }
-    .hero :nth-child(2){
+
+    .hero :nth-child(2) {
         margin-top: 25vh;
     }
-    .hero h1{
+
+    .hero h1 {
         font-size: 9.8vw;
         font-weight: 600;
         text-transform: uppercase;
         line-height: 10.5vw;
         position: relative;
     }
-    #hero1::before{
+
+    #hero1::before {
         content: "01";
         position: absolute;
         font-size: 5vw;
@@ -658,7 +911,8 @@ body{
         left: 5%;
         top: 35%;
     }
-    .hero h2{
+
+    .hero h2 {
         /* background-color: red; */
         font-size: 9.8vw;
         font-weight: 600;
@@ -668,13 +922,14 @@ body{
     }
 
 
-    #page2{
+    #page2 {
         height: 58vh;
         width: 100%;
         padding-top: 6vh;
         position: relative;
     }
-    #video-container{
+
+    #video-container {
         height: 52vh;
         width: 100vw;
         position: relative;
@@ -682,15 +937,18 @@ body{
         background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
         background-size: cover;
         background-position: center;
-    
+
     }
-    #video-container video{
+
+    #video-container video {
         height: 100%;
         width: 100%;
+        -o-object-fit: cover;
         object-fit: cover;
         opacity: 0;
-    }  
-    #video-cursor{
+    }
+
+    #video-cursor {
         background-color: #FFA63D;
         height: 25vw;
         width: 25vw;
@@ -698,18 +956,27 @@ body{
         position: absolute;
         top: 50;
         left: 50%;
-        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         z-index: 999;
     }
-    #video-cursor i{
+
+    #video-cursor i {
         font-size: 5vw;
     }
 
 
-    #page3{
+    #page3 {
         min-height: 100vh;
         width: 100%;
         /* background-color: rgb(101, 99, 99); */
@@ -718,14 +985,16 @@ body{
         margin-bottom: 0vh;
         margin-top: 0vh;
     }
-    #page3 h1{
+
+    #page3 h1 {
         font-size: 9.5vw;
         text-transform: uppercase;
         position: relative;
         margin-left: 2vw;
         margin-bottom: 5vw;
     }
-    #page3 h1::before{
+
+    #page3 h1::before {
         content: "02";
         position: absolute;
         font-size: 5vw;
@@ -734,42 +1003,61 @@ body{
         left: 0%;
         top: -66%;
     }
-    #page3 .underline{
+
+    #page3 .underline {
         margin-left: 2vw;
         width: 94%;
     }
-    #image-div-container{
+
+    #image-div-container {
         /* background-color: red; */
         margin-top: 10vw;
         padding: 1vw;
         position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
-    .image-div{
+
+    .image-div {
         height: 110vw;
         width: 90vw;
         position: relative;
         overflow: hidden;
+        -ms-flex-negative: 0;
         flex-shrink: 0;
         margin: 1vw;
         margin-bottom: 8vw;
         /* background-color: blue; */
     }
-    .image-div:nth-child(1){
+
+    .image-div:nth-child(1) {
         height: 110vw;
         width: 90vw;
     }
-    .image-div img{
+
+    .image-div img {
         height: 100%;
         width: 100%;
+        -o-object-fit: cover;
         object-fit: cover;
+        -o-object-position: center;
         object-position: center;
     }
-    .page3-circle1{
+
+    .page3-circle1 {
         height: 23vw;
         width: 23vw;
         margin-top: 23vh;
@@ -777,15 +1065,23 @@ body{
         border: 2px solid #fff;
         border-radius: 50%;
         position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         display: none;
     }
-    .page3-circle1 svg{
+
+    .page3-circle1 svg {
         height: 30%;
     }
-    .page3-circle2{
+
+    .page3-circle2 {
         height: 23vw;
         width: 23vw;
         /* margin-top: 23vh; */
@@ -793,75 +1089,103 @@ body{
         border: 2px solid #fff;
         border-radius: 50%;
         position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         display: none;
     }
-    .page3-circle2 svg{
+
+    .page3-circle2 svg {
         height: 30%;
         rotate: -45deg;
     }
-    .circle-in{
+
+    .circle-in {
         height: 100%;
         width: 100%;
         position: absolute;
         top: 0;
         left: 0;
         background-color: #fff;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-transition: all ease 0.5s;
+        -o-transition: all ease 0.5s;
         transition: all ease 0.5s;
         scale: 0;
         border-radius: 50%;
     }
-    .circle-in p{
+
+    .circle-in p {
         font-size: 0.95vw;
         font-weight: 500;
         color: #000;
         width: 60%;
         scale: 0;
+        -webkit-transition: all ease 0.5s;
+        -o-transition: all ease 0.5s;
         transition: all ease 0.5s;
+        -webkit-transition-delay: 0.3s;
+        -o-transition-delay: 0.3s;
         transition-delay: 0.3s;
         opacity: 0;
     }
-    .page3-circle1:hover .circle-in{
+
+    .page3-circle1:hover .circle-in {
         scale: 1;
     }
-    .page3-circle2:hover .circle-in{
+
+    .page3-circle2:hover .circle-in {
         scale: 1;
     }
-    .page3-circle1:hover p{
+
+    .page3-circle1:hover p {
         scale: 1;
         opacity: 1;
     }
-    .page3-circle2:hover p{
+
+    .page3-circle2:hover p {
         scale: 1;
         opacity: 1;
     }
 
 
-    #page4{
+    #page4 {
         min-height: 100vh;
         width: 100%;
         /* background-color: rgb(101, 99, 99); */
         position: relative;
         padding: 10vh 5vw;
     }
-    #page4-content{
+
+    #page4-content {
         width: 90vw;
         position: relative;
         margin-left: 0%;
         /* background-color: red; */
 
     }
-    #page4-content h1{
+
+    #page4-content h1 {
         font-size: 9.5vw;
         text-transform: uppercase;
         position: relative;
     }
-    #page4-content h1::before{
+
+    #page4-content h1::before {
         content: "03";
         position: absolute;
         font-size: 3vw;
@@ -870,33 +1194,44 @@ body{
         left: -12%;
         top: 8%;
     }
-    #page4-content .underline{
+
+    #page4-content .underline {
         height: 1px;
         width: 100%;
         background-color: #fff;
         margin: 5vw 0 10vw 0;
     }
-    #page4-content>p{
+
+    #page4-content>p {
         /* Tere ">" is because in page4-content, there are many paragraph ans this symbol is for just inside the paragraph, not other. */
         font-size: 5.8vw;
         width: 90%;
         margin-bottom: 3vw;
     }
-    #page4-flex{
+
+    #page4-flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
-    #page4-flex img{
+
+    #page4-flex img {
         width: 100%;
         margin: 5vw 0 8vw 0;
     }
-    #page4-flex p{
+
+    #page4-flex p {
         font-size: 4vw;
         width: 90%;
         margin-left: 0vw;
         margin-bottom: 5vw;
     }
-    #page4-blue-div{
+
+    #page4-blue-div {
         background-color: #3F7DF4;
         width: 90vw;
         padding: 5vw;
@@ -905,40 +1240,52 @@ body{
         margin-top: 0vh;
         margin-left: 0vw;
     }
-    .blue-div-elem{
+
+    .blue-div-elem {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items:flex-start;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         /* background-color: red; */
         padding: 4.7vw 0;
         border-bottom: 2px solid #ffffff94;
     }
-    .blue-div-elem h4{
+
+    .blue-div-elem h4 {
         font-size: 3.9vw;
         font-weight: 500;
     }
-    .blue-div-elem p{
+
+    .blue-div-elem p {
         width: 50%;
         font-size: 3.6vw;
     }
-    #page4-content .underline:nth-child(1){
+
+    #page4-content .underline:nth-child(1) {
         margin: 26vw 0 7vw 0;
 
     }
 
 
-    #page5{
+    #page5 {
         min-height: 60vh;
         width: 100%;
         position: relative;
     }
-    .elem{
+
+    .elem {
         /* background-color: red; */
         white-space: nowrap;
         overflow-x: hidden;
         margin-bottom: -2vw;
     }
-    .elem h1{
+
+    .elem h1 {
         text-transform: uppercase;
         font-size: 12vw;
         -webkit-text-stroke: 1px #fff;
@@ -946,33 +1293,54 @@ body{
         color: transparent;
         display: inline-block;
         margin-right: 16px;
+        -webkit-animation-name: anime1;
         animation-name: anime1;
+        -webkit-animation-duration: 20s;
         animation-duration: 20s;
+        -webkit-animation-timing-function: linear;
         animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
         animation-iteration-count: infinite;
     }
-    .elem span{
+
+    .elem span {
         font-style: italic;
         font-family: "silk serif";
         color: transparent;
     }
-    
-    @keyframes anime1{
-        from{
+
+    @-webkit-keyframes anime1 {
+        from {
+            -webkit-transform: translateX(0);
             transform: translateX(0);
         }
-        to{
+
+        to {
+            -webkit-transform: translateX(calc(-100% - 20px));
             transform: translateX(calc(-100% - 20px));
         }
     }
-    
-    .elem2{
+
+    @keyframes anime1 {
+        from {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+
+        to {
+            -webkit-transform: translateX(calc(-100% - 20px));
+            transform: translateX(calc(-100% - 20px));
+        }
+    }
+
+    .elem2 {
         /* background-color: red; */
         white-space: nowrap;
         overflow-x: hidden;
         margin-bottom: -2vw;
     }
-    .elem2 h1{
+
+    .elem2 h1 {
         text-transform: uppercase;
         font-size: 7vw;
         -webkit-text-stroke: 1px #fff;
@@ -980,21 +1348,28 @@ body{
         color: transparent;
         display: inline-block;
         margin-right: 16px;
+        -webkit-transform: translateX(calc(-100% - 20px));
+        -ms-transform: translateX(calc(-100% - 20px));
         transform: translateX(calc(-100% - 20px));
+        -webkit-animation-name: anime1;
         animation-name: anime1;
+        -webkit-animation-duration: 12s;
         animation-duration: 12s;
+        -webkit-animation-timing-function: linear;
         animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
         animation-iteration-count: infinite;
         animation-direction: reverse;
     }
-    .elem2 span{
+
+    .elem2 span {
         font-style: italic;
         font-family: "silk serif";
         color: transparent;
     }
-    
-    
-    #footer{
+
+
+    #footer {
         height: 108vh;
         width: 100%;
         /* background-color: red; */
@@ -1002,13 +1377,15 @@ body{
         padding: 5vw 5vw;
         padding-bottom: 5vw;
     }
-    #footer h1{
+
+    #footer h1 {
         font-size: 9.5vw;
         text-transform: uppercase;
         /* background-color: blue; */
         position: relative;
     }
-    #footer h1::before{
+
+    #footer h1::before {
         content: "04";
         position: absolute;
         font-size: 5vw;
@@ -1017,37 +1394,52 @@ body{
         left: 0%;
         top: -488%;
     }
-    .underline{
+
+    .underline {
         height: 1px;
         width: 100%;
         background-color: #fff;
         margin: 8vw 0;
     }
-    #footer-div{
+
+    #footer-div {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding-right: 15vw;
         padding-top: 4vw;
         margin-bottom: 6vw;
     }
-    #footer-div h6{
+
+    #footer-div h6 {
         font-size: 4.9vw;
         margin-bottom: 3.5vw;
         font-weight: 500;
     }
-    .box{
+
+    .box {
         width: 30%;
         margin-bottom: 5vw;
     }
-    #footer-div h5{
+
+    #footer-div h5 {
         font-size: 5.4vw;
         font-weight: 500;
         margin-bottom: 1.5vw;
         /* margin: 0.1vh 0; */
     }
-    #footer > h5{
+
+    #footer>h5 {
         font-size: 4vw;
         margin-bottom: 4vw;
         font-weight: 500;
