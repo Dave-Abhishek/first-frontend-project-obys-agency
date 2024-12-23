@@ -48,7 +48,7 @@ function loadingAnimation() {
         delay: 0.5,
     })
 
-
+ 
     tl.from("#line1-part1", {
         opacity: 0,
 
